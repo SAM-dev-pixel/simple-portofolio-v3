@@ -61,6 +61,12 @@ a {
 .hero-img {
   width: 40%;
 }
+.intro-txt {
+  padding-bottom: 2em;
+}
+.skill-title {
+  font-size: 2rem;
+}
 .intro-title {
   font-size: 6rem;
   text-transform: uppercase;
@@ -79,14 +85,27 @@ a {
 .work-content-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
 }
 .work-wrapper {
   width: 30%;
-  text-align: center;
+  padding: .75em;
+  cursor: pointer;
+}
+.work-wrapper:hover {
+  outline: 1px solid var(--dark-1);
 }
 .work-wrapper img {
   width: 100%;
+}
+.work-wrapper a {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 1em;
+  display: inline-block;
+}
+.work-wrapper a:hover {
+  text-decoration: underline;
 }
 .contact-container {
   min-height: 100vh;
