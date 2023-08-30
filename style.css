@@ -49,6 +49,43 @@ a:hover {
   color: var(--dark-1);
   text-transform: uppercase;
 }
+.burger-btn {
+  display: none;
+}
+@media (width <= 41.5rem) {
+  .name-logo {
+    z-index: 99;
+  }
+  .nav-links {
+    width: 85%;
+    padding-right: 15%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    transition: 0.25s;
+  }
+  .nav-links.show {
+    right: 0;
+  }
+  .burger-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    z-index: 99;
+  }
+  .burger-btn div {
+    width: 2em;
+    height: 0.2rem;
+    background-color: var(--dark-1);
+  }
+}
+
 .main-container {
   height: 100%;
   padding: 0 5%;
