@@ -104,10 +104,16 @@ a:hover {
 }
 .hero-img {
   width: 40%;
+  border: 5px double var(--dark-1);
 }
 .intro-txt {
   font-size: 1.75rem;
-  padding-bottom: 2em;
+}
+.border-line {
+  width: 40%;
+  height: 2px;
+  margin: 0.5rem 0 1.5rem 0;
+  background-color: var(--dark-1);
 }
 .skill-title {
   font-size: 2rem;
