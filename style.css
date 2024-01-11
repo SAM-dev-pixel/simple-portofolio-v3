@@ -6,10 +6,13 @@
 }
 :root {
   --dark-1: #000;
+  --grey: #f1efef;
+  --white: #fff;
 }
 body {
   min-height: 100vh;
   font-family: "Cormorant Garamond", serif;
+  background-color: var(--grey);
 }
 ul {
   list-style: none;
@@ -24,6 +27,7 @@ a:hover {
   position: sticky;
   top: 0;
   background: #fff;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
 }
 .navbar {
   padding: 1rem 5%;
@@ -87,8 +91,12 @@ a:hover {
 }
 
 .main-container {
+  max-width: 1440px;
   height: 100%;
+  margin: auto;
   padding: 0 5%;
+  background-color: var(--white);
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
 }
 .intro-container,
 .work-container,
@@ -135,11 +143,15 @@ a:hover {
 }
 .work-content-wrapper {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
 }
 .work-wrapper {
-  width: 30%;
+  /* width: 30%; */
+  /* width: 25.15rem; */
+  /* width: clamp(100%, 1vw, 25.15rem); */
+  width: min(100%, 25.15rem);
   padding: 0.75em;
   cursor: pointer;
 }
@@ -151,13 +163,19 @@ a:hover {
 }
 .work-wrapper a {
   color: var(--dark-1);
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  font-size: clamp(0.75rem, 5vw, 1.5rem);
   text-transform: uppercase;
   margin-top: 1em;
   display: inline-block;
 }
 .work-wrapper a:hover {
   text-decoration: underline;
+}
+footer {
+  max-width: 1440px;
+  margin: auto;
+  background-color: var(--white);
 }
 .contact-txt {
   width: 70%;
@@ -181,4 +199,21 @@ a:hover {
 }
 .year-copyright {
   font-family: "Roboto", sans-serif;
+}
+
+@media (width <= 1000px) {
+  .intro-content-wrapper {
+    flex-direction: column;
+  }
+  .hero-img {
+    width: 80%;
+  }
+}
+@media (width <= 768px) {
+  .hero-img {
+    width: 100%;
+  }
+  .intro-title {
+    font-size: 12.25vw;
+  }
 }
