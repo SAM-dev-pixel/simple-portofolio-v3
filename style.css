@@ -27,7 +27,7 @@ a:hover {
   position: sticky;
   top: 0;
   background: #fff;
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 .navbar {
   padding: 1rem 5%;
@@ -37,7 +37,8 @@ a:hover {
 }
 .name-logo {
   color: var(--dark-1);
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: clamp(1.25rem, 6vw, 2rem);
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -101,7 +102,6 @@ a:hover {
 .intro-container,
 .work-container,
 .contact-container {
-  min-height: 100vh;
   padding-top: 3.5rem;
 }
 .intro-content-wrapper {
@@ -114,8 +114,12 @@ a:hover {
   width: 40%;
   border: 5px double var(--dark-1);
 }
-.intro-txt {
-  font-size: 1.75rem;
+.intro-txt,
+.contact-txt {
+  font-size: clamp(1rem, 6vw, 1.75rem);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
 }
 .border-line {
   width: 40%;
@@ -124,22 +128,28 @@ a:hover {
   background-color: var(--dark-1);
 }
 .skill-title {
-  font-size: 2rem;
+  /* font-size: 1.75rem; */
+  font-size: 1rem, 6vw, 1.75rem;
 }
 .intro-title {
-  font-size: 6rem;
+  /* font-size: 6rem; */
+  font-size: clamp(2rem, 12vw, 6rem);
   text-transform: uppercase;
   font-weight: 700;
 }
 .work-title,
 .contact-title {
   text-align: end;
-  font-size: 4rem;
+  /* font-size: 4rem; */
+  font-size: clamp(1.75rem, 10vw, 4rem);
   text-transform: uppercase;
 }
 .skill-list {
-  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  /* font-size: 1.25rem; */
+  font-size: clamp(0.75rem, 6vw, 1.25rem);
   list-style: inside;
+  font-family: "Roboto", sans-serif;
 }
 .work-content-wrapper {
   display: flex;
@@ -179,11 +189,9 @@ footer {
 }
 .contact-txt {
   width: 70%;
-  font-size: 1.5rem;
   padding: 1em 0;
   margin-left: auto;
   text-align: end;
-  text-transform: uppercase;
 }
 .contact-links {
   font-size: 1.5rem;
@@ -215,5 +223,8 @@ footer {
   }
   .intro-title {
     font-size: 12.25vw;
+  }
+  .contact-txt {
+    width: 100%;
   }
 }
